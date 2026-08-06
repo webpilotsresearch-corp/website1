@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>WebPilot | Websites That Grow Your Business</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Inter',sans-serif;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#0b1120;
+    color:white;
+}
+
+header{
+    position:fixed;
+    width:100%;
+    top:0;
+    background:rgba(11,17,32,.85);
+    backdrop-filter:blur(10px);
+    z-index:999;
+}
+
+nav{
+    max-width:1200px;
+    margin:auto;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px;
+}
+
+.logo{
+    font-size:28px;
+    font-weight:800;
+    color:#4f9cff;
+}
+
+.logo span{
+    color:#00d4ff;
+}
+
+nav ul{
+    list-style:none;
+    display:flex;
+    gap:30px;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    transition:.3s;
+}
+
+nav a:hover{
+    color:#4f9cff;
+}
+
+.btn{
+    background:linear-gradient(135deg,#4f9cff,#00d4ff);
+    padding:14px 28px;
+    border-radius:999px;
+    text-decoration:none;
+    color:white;
+    font-weight:700;
+    display:inline-block;
+    transition:.3s;
+}
+
+.btn:hover{
+    transform:translateY(-3px);
+    box-shadow:0 10px 25px rgba(0,212,255,.3);
+}
+
+.hero{
+    max-width:1200px;
+    margin:auto;
+    min-height:100vh;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    align-items:center;
+    gap:60px;
+    padding:120px 20px 50px;
+}
+
+.hero h1{
+    font-size:60px;
+    line-height:1.1;
+}
+
+.hero h1 span{
+    color:#4f9cff;
+}
+
+.hero p{
+    margin:25px 0;
+    font-size:18px;
+    color:#b5bdd3;
+    line-height:1.7;
+}
+
+.hero-card{
+    background:linear-gradient(145deg,#111b31,#182443);
+    padding:40px;
+    border-radius:20px;
+    box-shadow:0 30px 50px rgba(0,0,0,.35);
+}
+
+.browser{
+    background:#fff;
+    border-radius:12px;
+    overflow:hidden;
+}
+
+.browser-top{
+    background:#ececec;
+    padding:10px;
+}
+
+.dot{
+    width:10px;
+    height:10px;
+    border-radius:50%;
+    display:inline-block;
+    margin-right:5px;
+}
+
+.red{background:#ff605c;}
+.yellow{background:#ffbd44;}
+.green{background:#00ca4e;}
+
+.browser-body{
+    background:linear-gradient(135deg,#4f9cff,#00d4ff);
+    padding:60px 30px;
+    color:white;
+    text-align:center;
+}
+
+.browser-body h2{
+    font-size:32px;
+}
+
+section{
+    padding:100px 20px;
+}
+
+.container{
+    max-width:1200px;
+    margin:auto;
+}
+
+.section-title{
+    text-align:center;
+    font-size:40px;
+    margin-bottom:50px;
+}
+
+.cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+    gap:30px;
+}
+
+.card{
+    background:#111b31;
+    padding:35px;
+    border-radius:18px;
+    transition:.3s;
+}
+
+.card:hover{
+    transform:translateY(-10px);
+}
+
+.card h3{
+    margin-bottom:15px;
+    color:#4f9cff;
+}
+
+.pricing{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:35px;
+}
+
+.price{
+    background:#111b31;
+    padding:40px;
+    border-radius:20px;
+    text-align:center;
+}
+
+.price.featured{
+    border:2px solid #4f9cff;
+    transform:scale(1.05);
+}
+
+.price h2{
+    color:#4f9cff;
+    margin:20px 0;
+}
+
+.price ul{
+    list-style:none;
+    margin:30px 0;
+}
+
+.price li{
+    margin:12px 0;
+    color:#b5bdd3;
+}
+
+.contact{
+    text-align:center;
+}
+
+form{
+    max-width:700px;
+    margin:auto;
+}
+
+input,textarea{
+    width:100%;
+    padding:18px;
+    margin:12px 0;
+    border:none;
+    border-radius:12px;
+    background:#111b31;
+    color:white;
+}
+
+textarea{
+    min-height:160px;
+}
+
+button{
+    border:none;
+    cursor:pointer;
+}
+
+footer{
+    text-align:center;
+    padding:40px;
+    color:#8b95b5;
+    border-top:1px solid #1d2b52;
+}
+
+@media(max-width:900px){
+
+.hero{
+grid-template-columns:1fr;
+text-align:center;
+}
+
+.hero h1{
+font-size:42px;
+}
+
+nav ul{
+display:none;
+}
+
+}
+</style>
+
+</head>
+<body>
+
+<header>
+
+<nav>
+
+<div class="logo">Web<span>Pilot</span></div>
+
+<ul>
+<li><a href="#services">Services</a></li>
+<li><a href="#pricing">Pricing</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+
+<a href="#contact" class="btn">Get Started</a>
+
+</nav>
+
+</header>
+
+<section class="hero">
+
+<div>
+
+<h1>Professional <span>Websites</span> That Turn Visitors Into Customers.</h1>
+
+<p>
+WebPilot builds modern, fast, and mobile-friendly websites for businesses of every size. Whether you're launching a startup or growing an established company, we'll create a website that helps you stand out online.
+</p>
+
+<a class="btn" href="#pricing">View Pricing</a>
+
+</div>
+
+<div class="hero-card">
+
+<div class="browser">
+
+<div class="browser-top">
+<span class="dot red"></span>
+<span class="dot yellow"></span>
+<span class="dot green"></span>
+</div>
+
+<div class="browser-body">
+<h2>🚀 Your Future Website</h2>
+<p>Modern • Fast • Responsive</p>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section id="services">
+
+<div class="container">
+
+<h2 class="section-title">Our Services</h2>
+
+<div class="cards">
+
+<div class="card">
+<h3>🌐 Business Websites</h3>
+<p>Professional websites designed to build trust and attract customers.</p>
+</div>
+
+<div class="card">
+<h3>🛒 Online Stores</h3>
+<p>Sell products online with secure and easy-to-use ecommerce solutions.</p>
+</div>
+
+<div class="card">
+<h3>⚡ Performance</h3>
+<p>Fast-loading websites optimized for Google and mobile devices.</p>
+</div>
+
+<div class="card">
+<h3>🎨 Custom Design</h3>
+<p>Every website is uniquely designed to match your brand identity.</p>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section id="pricing">
+
+<div class="container">
+
+<h2 class="section-title">Simple Pricing</h2>
+
+<div class="pricing">
+
+<div class="price">
+<h3>Starter</h3>
+<h2>$499</h2>
+<ul>
+<li>5 Pages</li>
+<li>Responsive Design</li>
+<li>Contact Form</li>
+<li>Basic SEO</li>
+</ul>
+
+<a href="#contact" class="btn">Choose Plan</a>
+
+</div>
+
+<div class="price featured">
+<h3>Business</h3>
+<h2>$999</h2>
+<ul>
+<li>10+ Pages</li>
+<li>Custom Design</li>
+<li>SEO Optimization</li>
+<li>Analytics</li>
+<li>Priority Support</li>
+</ul>
+
+<a href="#contact" class="btn">Most Popular</a>
+
+</div>
+
+<div class="price">
+<h3>Enterprise</h3>
+<h2>Custom</h2>
+<ul>
+<li>Unlimited Pages</li>
+<li>Custom Features</li>
+<li>API Integration</li>
+<li>Maintenance</li>
+<li>Dedicated Support</li>
+</ul>
+
+<a href="#contact" class="btn">Contact Us</a>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section id="contact">
+
+<div class="container contact">
+
+<h2 class="section-title">Let's Build Your Website</h2>
+
+<form>
+
+<input type="text" placeholder="Your Name">
+
+<input type="email" placeholder="Email Address">
+
+<textarea placeholder="Tell us about your project..."></textarea>
+
+<button class="btn">Send Message</button>
+
+</form>
+
+</div>
+
+</section>
+
+<footer>
+
+<p>© 2026 WebPilot. All Rights Reserved.</p>
+<p>Professional Websites • Fast Delivery • Modern Design</p>
+
+</footer>
+
+</body>
+</html>
